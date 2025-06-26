@@ -1,0 +1,28 @@
+/* Navbar Sticky Fix */
+
+/* Ensure header sticks properly */
+header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+}
+
+/* Remove any conflicting transforms that might break sticky */
+header, header * {
+    transform-style: flat;
+}
+
+/* Ensure parent containers don't break sticky */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix for Safari sticky issues */
+@supports (-webkit-appearance: none) {
+    header {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}

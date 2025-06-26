@@ -1,0 +1,52 @@
+/* Layout Improvements CSS */
+
+/* Hero section vertical centering */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 180px); /* Adjust to ensure proper vertical centering */
+}
+
+/* Ensure both content and image are vertically centered */
+.hero-content, .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Position the location badge prominently in the hero section */
+.location-badge {
+    top: 100px; /* Position below the navbar */
+    bottom: auto;
+    right: 40px;
+}
+
+/* Ensure proper spacing in mobile view */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 40px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-section {
+        padding: 60px 0 100px;
+    }
+    
+    .hero-content, .hero-image {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .location-badge {
+        top: auto; /* Reset top position */
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 20px; /* Position at bottom in mobile view for better visibility */
+    }
+}

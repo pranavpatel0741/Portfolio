@@ -1,0 +1,59 @@
+/* Clean Profile Picture Styling with Enhanced Size */
+.portrait-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+    padding: 0; /* Remove the padding that's causing the white line */
+    background: rgba(25,25,35,0.6);
+    transition: all 0.3s ease;
+    transform: scale(1.1); /* Make the container slightly larger */
+}
+
+/* Remove all special effects */
+.portrait-container:before {
+    display: none;
+}
+
+.portrait-container:after {
+    display: none;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    /* Ensure the image properly fills the container */
+    object-fit: cover;
+    border: none; /* Ensure no default border is applied */
+}
+
+.portrait-animation {
+    clip-path: circle(100% at 50% 50%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgba(10,10,10,0.8); /* Dark background color to match the site's theme */
+}
+
+/* Remove shine effect */
+.portrait-animation::after {
+    display: none;
+}
+
+/* Remove sparkle effects */
+.image-wrapper::before {
+    display: none;
+}
+
+.image-wrapper::after {
+    display: none;
+}
+
+/* Animations removed */

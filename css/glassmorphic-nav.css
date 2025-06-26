@@ -1,0 +1,235 @@
+/* Modern Glassmorphic Navigation Bar */
+
+/* Main navigation container styling */
+header.nav-modern {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1400px;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(15, 15, 20, 0.75); /* Semi-transparent dark background */
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Add a subtle hover effect */
+header.nav-modern:hover {
+    background-color: rgba(18, 18, 24, 0.85);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* Inner container adjustment */
+header.nav-modern .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Navigation items styling */
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    position: relative;
+}
+
+/* Enhanced link styling */
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Pill indicator for active or hovered link */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    opacity: 1;
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+/* Logo styling */
+.logo a {
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Add subtle glow effect to logo */
+.logo a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--primary);
+    filter: blur(20px);
+    opacity: 0.2;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.logo a:hover::before {
+    opacity: 0.4;
+}
+
+/* Mobile menu button styling */
+.mobile-menu-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active state for mobile menu button */
+.mobile-menu-btn.active span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Sticky navigation behavior */
+header.nav-modern.sticky {
+    top: 15px;
+    background-color: rgba(15, 15, 20, 0.9);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    animation: subtleFloat 0.5s ease forwards;
+    overflow: hidden; /* Ensures no scrolling within the navbar */
+}
+
+/* Animation for sticky mode */
+@keyframes subtleFloat {
+    from {
+        transform: translateX(-50%) translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    header.nav-modern {
+        width: 95%;
+    }
+    
+    .nav-links {
+        margin-right: 0;
+    }
+    
+    .nav-links ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header.nav-modern {
+        padding: 0.8rem;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        overflow: hidden; /* Prevents internal scrolling */
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem;
+    }
+}

@@ -1,0 +1,28 @@
+/* Profile Background Fix */
+
+/* Ensure no white lines appear in the profile image */
+.image-wrapper.portrait-container {
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    background: #0A0A0A; /* Match site background color */
+}
+
+/* Ensure profile image fits perfectly in the container */
+.profile-image.portrait-animation {
+    border-radius: 50%;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: #0A0A0A; /* Match site background color */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Remove any possible borders that might cause white lines */
+.tilt-card, .tilt-content {
+    border: none !important;
+    overflow: hidden;
+}

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Patel | Full Stack Developer | Software QA Engineer</title>
+    <meta name="description" content="Portfolio of Pranav Patel - Full Stack Developer, Software Engineer, and QA Engineer seeking co-op opportunities">
+    
+    <!-- SEO Tags -->
+    <meta name="keywords" content="Pranav Patel, Full Stack Developer, Software Engineer, QA Engineer, MERN Stack, Azure, Portfolio, TypeScript, React, Next.js">
+    <meta property="og:title" content="Pranav Patel | Full Stack Developer | Software QA Engineer">
+    <meta property="og:description" content="Portfolio of Pranav Patel - Full Stack Developer, Software Engineer, and QA Engineer at Northeastern University">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advanced-effects.css">
+    <link rel="stylesheet" href="css/react-projects.css">
+    <link rel="stylesheet" href="css/performance-fixes.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
+    <link rel="stylesheet" href="css/enhanced-profile.css">
+    <link rel="stylesheet" href="css/enhanced-footer.css">
+    <link rel="stylesheet" href="css/layout-improvements.css">
+    <link rel="stylesheet" href="css/profile-bg-fix.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Modern Icons (Feather Icons via CDN) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Custom cursor removed as requested -->
+    
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#hero" class="text-gradient">PP.</a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-menu-btn" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section full-bleed">
+            <div class="hero-background parallax-bg">
+                <div class="overlay gradient-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-container reveal-animation">
+                    <div class="hero-content">
+                        <h1 class="animate-text mega-title">Pranav Patel</h1>
+                        <div class="tagline">
+                            <div class="tag-pill">Full Stack Developer</div>
+                            <div class="tag-pill">Software Engineer</div>
+                            <div class="tag-pill">Software QA Engineer</div>
+                        </div>
+                        <p class="hero-description">
+                            MS in Information Systems at Northeastern University
+                        </p>
+                        <div class="hero-tags">
+                            <div class="hero-tag"><i class="fas fa-cloud"></i> Azure & AWS MERN Stack</div>
+                            <div class="hero-tag"><i class="fas fa-briefcase"></i> Actively Seeking Co-op</div>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#contact" class="primary-btn btn-hover-effect">Get In Touch</a>
+                            <a href="#projects" class="secondary-btn btn-hover-effect">View Projects</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-wrapper tilt-card portrait-container">
+                            <!-- Placeholder for profile image with portrait animation -->
+                            <div class="profile-image tilt-content portrait-animation" style="background-image: url('images/profile-placeholder.png');"></div>
+                        </div>
+                        <div class="social-links">
+                            <a href="mailto:patel.pranavna@northeastern.edu" aria-label="Email" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pranav-patel-061754325/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/pranavpatel0741" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Location Badge - Prominently displayed in hero section -->
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt pulse-animation"></i>
+                <span>Boston, MA</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <span class="section-subtitle">Who I Am</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content split-layout">
+                    <div class="about-text reveal-animation">
+                        <p class="lead-text">
+                            Software Engineering Intern with strong skills in TypeScript, NestJS, Next.js, Python, and SQL.
+                        </p>
+                        <p>
+                            Passionate about building scalable backend systems, quantum computing, and ML-powered analytics. Experienced in microservices, REST API development, cloud deployment (AWS, Azure), and CI/CD workflows using GitHub Actions. Avid learner in quantum algorithms, error correction, and financial modeling.
+                        </p>
+                        <div class="stats">
+                            <div class="stat-item stat-card">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item stat-card">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-item stat-card">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image reveal-animation">
+                        <div class="image-container tilt-card">
+                            <div class="background-pattern"></div>
+                            <div class="about-profile-image tilt-content" style="background-image: url('images/profile-placeholder.png');"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <h2>Education</h2>
+                </div>
+                <div class="education-grid">
+                    <div class="education-card reveal-animation">
+                        <div class="education-header">
+                            <h3>Master of Science in Information Systems</h3>
+                            <span class="education-date">Sep 2024 – Dec 2026 (Expected)</span>
+                        </div>
+                        <div class="education-body">
+                            <div class="education-school">
+                                <i class="fas fa-university"></i>
+                                <span>Northeastern University</span>
+                            </div>
+                            <div class="education-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Boston, MA</span>
+                            </div>
+                            <div class="education-courses">
+                                <i class="fas fa-book"></i>
+                                <span>Software QA & Testing, Data Science Tools, UX Design, Engineering for Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card reveal-animation">
+                        <div class="education-header">
+                            <h3>Bachelor of Science in Computer Engineering</h3>
+                            <span class="education-date">Aug 2020 – May 2024</span>
+                        </div>
+                        <div class="education-body">
+                            <div class="education-school">
+                                <i class="fas fa-university"></i>
+                                <span>LDRP Institute of Technology and Research</span>
+                            </div>
+                            <div class="education-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Gujarat, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <span class="section-subtitle">What I Do</span>
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="skills-grid modern-grid">
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Bash</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">NestJS</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Spring Boot</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS (EC2, Lambda, S3)</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">CloudWatch</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">caret</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Quantum Computing</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Qiskit</span>
+                            <span class="skill-tag">Quantum Circuits</span>
+                            <span class="skill-tag">Error Correction</span>
+                        </div>
+                    </div>
+                    <div class="skill-category skill-card reveal-animation">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Visualization & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">MLflow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <span class="section-subtitle">My Work</span>
+                    <h2>Projects</h2>
+                </div>
+                <div class="project-filter reveal-animation">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="development">Development</button>
+                    <button class="filter-btn" data-filter="ml">ML & AI</button>
+                    <button class="filter-btn" data-filter="testing">Testing</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- UFT Test Automation Project -->
+                    <div class="project-card reveal-animation" data-category="testing">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="UFT Test Automation Project" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="uft-automation">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Flight GUI System Test Automation</h3>
+                                <div class="project-role">UFT Automation Project</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Simulated update scenarios and automated validation using Micro Focus UFT, applying a Data-Driven Testing Framework to assess system integrity post-change.</li>
+                                <li>Conducted data analysis to identify discrepancies and support root cause analysis for quality improvements.</li>
+                                <li>Collaborated with cross-functional teams to document test execution and present findings in live demos.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Micro Focus UFT</span>
+                                <span class="tech-tag">VBScript</span>
+                                <span class="tech-tag">Windows Scheduler</span>
+                                <span class="tech-tag">Data-Driven Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selenium WebDriver Project -->
+                    <div class="project-card reveal-animation" data-category="testing">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="Selenium WebDriver Automation Project" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="selenium-automation">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Web Application Test Automation</h3>
+                                <div class="project-role">Selenium WebDriver Project</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Developed modular, object-oriented test scripts in Java + Selenium WebDriver using Page Object Model (POM) and reusable test components.</li>
+                                <li>Built a data-driven automation framework with Apache POI and ExtentReports, ensuring traceability and analysis.</li>
+                                <li>Introduced health reporting for regression suites, highlighting test failures and system trends for engineering teams.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Selenium WebDriver</span>
+                                <span class="tech-tag">TestNG</span>
+                                <span class="tech-tag">ExtentReports</span>
+                                <span class="tech-tag">Apache POI</span>
+                                <span class="tech-tag">Maven</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- eTreatment Clinical System QA Project -->
+                    <div class="project-card reveal-animation" data-category="testing">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="eTreatment Clinical System QA Project" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="clinical-qa">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>eTreatment Clinical System QA</h3>
+                                <div class="project-role">Healthcare QA Project</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Led creation of Test Plan, Traceability Matrix, and Test Condition Matrix to validate healthcare workflows across modules.</li>
+                                <li>Executed and automated UAT scenarios using Pytest and gRPC to simulate client-server interactions and data updates.</li>
+                                <li>Conducted performance validation and edge case testing to mimic OTA-like reliability checks and configuration handling.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Pytest</span>
+                                <span class="tech-tag">gRPC</span>
+                                <span class="tech-tag">Healthcare QA</span>
+                                <span class="tech-tag">Client-Server Simulation</span>
+                                <span class="tech-tag">Microsoft Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 1 -->
+                    <div class="project-card reveal-animation" data-category="ml">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="Diabetes Risk Prediction Model" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="diabetes-risk">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Diabetes Risk Prediction Model</h3>
+                                <div class="project-role">Project Lead</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Developed a predictive model using tree-based machine learning on over 250K health records to assess diabetes risk.</li>
+                                <li>Created an interactive "What-If" tool in R to simulate lifestyle change impacts.</li>
+                                <li>Engineered an end-to-end AI pipeline with data preprocessing and hyperparameter tuning.</li>
+                                <li>Compiled results into a stakeholder-friendly report for healthcare partners.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">caret</span>
+                                <span class="tech-tag">ggplot2</span>
+                                <span class="tech-tag">data preprocessing</span>
+                                <span class="tech-tag">cross-validation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card reveal-animation" data-category="ml">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="Enterprise Generative AI Agent" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="enterprise-ai">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Enterprise Generative AI Agent</h3>
+                                <div class="project-role">LLM Fine-Tuning and Automation</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Fine-tuned domain-specific LLMs using enterprise data to support automated workflows and business intelligence.</li>
+                                <li>Built multi-step reasoning pipelines using LangChain and CrewAI for dynamic enterprise task orchestration.</li>
+                                <li>Evaluated model performance using BLEU, ROUGE, cosine similarity, and embedding-based metrics.</li>
+                                <li>Integrated outputs into consulting and operations workflows through stakeholder collaboration.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Hugging Face</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">CrewAI</span>
+                                <span class="tech-tag">MLflow</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card reveal-animation" data-category="ml">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="AI Chatbot for Customer Support" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="ai-chatbot">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AI Chatbot for Customer Support</h3>
+                                <div class="project-role">Project Lead</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Built a transformer-based chatbot to automate support ticket resolution with real-time user interaction.</li>
+                                <li>Integrated sentiment analysis and named entity recognition (NER) for accurate intent recognition.</li>
+                                <li>Used REST APIs and external services to provide contextual replies from previous conversations.</li>
+                                <li>Achieved 85% live query resolution accuracy, significantly reducing response time and support workload.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Hugging Face</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card reveal-animation" data-category="development">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="E-Commerce Platform Enhancement" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="ecommerce-platform">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>E-Commerce Platform Enhancement</h3>
+                                <div class="project-role">Full-Stack Development</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Developed REST API improvements and UI components to enhance performance and validation accuracy.</li>
+                                <li>Integrated Selenium and Postman into GitHub Actions to enable automated CI/CD regression testing.</li>
+                                <li>Worked within Agile squads to deliver features mapped to business KPIs.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card reveal-animation" data-category="development">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="AWS Self-Service Portal" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="aws-portal">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AWS Self-Service Portal</h3>
+                                <div class="project-role">Workflow Automation & Monitoring</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Created a React-based portal for configuring and monitoring AWS Direct Connect services across regions.</li>
+                                <li>Integrated CloudWatch for real-time metrics and alerting; surfaced data on usage and errors via dashboards.</li>
+                                <li>Enabled secure, testable deployments with GitHub Actions and Lambda automation.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">AWS API Gateway</span>
+                                <span class="tech-tag">Lambda</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card reveal-animation" data-category="development">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="TailorResumePro" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="resume-pro">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>TailorResumePro</h3>
+                                <div class="project-role">Resume Parsing & Job Matching App</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Led frontend engineering for a web tool to match resumes with job descriptions using smart scoring.</li>
+                                <li>Developed a modular UI with Tailwind CSS and Framer Motion for dynamic user interactions.</li>
+                                <li>Integrated localStorage-based onboarding flow and deployed on Azure Static Web Apps.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Framer Motion</span>
+                                <span class="tech-tag">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 7 -->
+                    <div class="project-card reveal-animation" data-category="ml">
+                        <div class="project-image">
+                            <img src="images/profile-placeholder.png" alt="Enterprise AI Data Agent" />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="view-project-btn" data-project="enterprise-data-agent">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Enterprise AI Data Agent</h3>
+                                <div class="project-role">Retrieval-Augmented Generation</div>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Built structured retrieval pipelines for QA systems using internal corpora and enterprise APIs (SAP, Salesforce).</li>
+                                <li>Benchmarked output relevance using BLEU and vector similarity metrics to improve downstream transformation.</li>
+                                <li>Automated data ingestion and evaluation with MLflow and Hugging Face workflows.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">CrewAI</span>
+                                <span class="tech-tag">SAP APIs</span>
+                                <span class="tech-tag">MLflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal Container -->
+                <div class="modal-container">
+                    <!-- Project Modal Templates -->
+                    <div id="modal-diabetes-risk" class="project-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Diabetes Risk Prediction Model</h3>
+                                <button class="close-modal"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-gallery">
+                                    <img src="images/profile-placeholder.png" alt="Project Screenshot">
+                                </div>
+                                <div class="modal-info">
+                                    <div class="modal-description">
+                                        <h4>Project Overview</h4>
+                                        <p>Developed a predictive model using tree-based machine learning on over 250K health records to assess diabetes risk. Created an interactive "What-If" tool in R to simulate the impact of lifestyle changes on predicted outcomes.</p>
+                                        
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li>End-to-end AI pipeline including data preprocessing and feature engineering</li>
+                                            <li>Interactive "What-If" simulator for healthcare professionals</li>
+                                            <li>Tree-based prediction models with rigorous cross-validation</li>
+                                            <li>Stakeholder-friendly reports and visualizations</li>
+                                        </ul>
+                                        
+                                        <h4>Technologies Used</h4>
+                                        <div class="modal-tech">
+                                            <span class="tech-tag">R</span>
+                                            <span class="tech-tag">caret</span>
+                                            <span class="tech-tag">ggplot2</span>
+                                            <span class="tech-tag">data preprocessing</span>
+                                            <span class="tech-tag">cross-validation</span>
+                                            <span class="tech-tag">model evaluation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional modals for each project -->
+                </div>
+                
+                <!-- Modal Overlay -->
+                <div class="modal-overlay"></div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="experience-timeline">
+                    
+                    <div class="experience-card reveal-animation">
+                        <div class="ui-ux-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="experience-header">
+                            <h3>Business Development Executive & Technical Support</h3>
+                            <span class="company">Zippit Now Pvt Ltd</span>
+                            <span class="experience-date">June 2023 - January 2024</span>
+                        </div>
+                        <div class="experience-body">
+                            <ul class="experience-list">
+                                <li>Integrated and validated REST APIs with enterprise data systems (SAP, Salesforce)</li>
+                                <li>Automated SQL pipelines and debugging tools for backend support</li>
+                                <li>Built dashboards and reports using Python and Excel</li>
+                                <li>Improved DevOps workflows using GitHub Actions and CI best practices</li>
+                                <li>Collaborated across UX, QA, and product teams on Agile sprints</li>
+                            </ul>
+                            <div class="experience-skills">
+                                <span class="skill-badge"><i class="fab fa-python"></i>Python</span>
+                                <span class="skill-badge"><i class="fas fa-database"></i>SQL</span>
+                                <span class="skill-badge"><i class="fab fa-github"></i>GitHub Actions</span>
+                                <span class="skill-badge"><i class="fab fa-salesforce"></i>Salesforce</span>
+                                <span class="skill-badge"><i class="fas fa-chart-line"></i>Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="certifications-grid">
+                    <div class="certification-card reveal-animation">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Python for Data Science</h3>
+                            <p>NPTEL</p>
+                            <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs99/Course/NPTEL23CS99S3446024810088778.pdf" target="_blank" rel="noopener" class="certification-link">
+                                <i class="fas fa-external-link-alt"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certification-card reveal-animation">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>100 Days of Code</h3>
+                            <p>Udemy</p>
+                            <a href="https://www.udemy.com/certificate/UC-ae773652-8be3-460a-ad61-7240752e88ef/" target="_blank" rel="noopener" class="certification-link">
+                                <i class="fas fa-external-link-alt"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certification-card reveal-animation">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-content">
+                            <h3>Artificial Intelligence with Machine Learning</h3>
+                            <a href="https://drive.google.com/drive/mobile/folders/1D8sIZ-tbVHa7_11umE1g4AvVebFv6pbJ?usp=sharing" target="_blank" rel="noopener" class="certification-link">
+                                <i class="fas fa-external-link-alt"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header reveal-animation">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-text reveal-animation">
+                        <p>
+                            I'm currently open to new opportunities and collaborations. Feel free to reach out if you'd like to discuss potential projects or just want to connect.
+                        </p>
+                    </div>
+                    <div class="contact-links reveal-animation">
+                        <a href="mailto:patel.pranavna@northeastern.edu" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>patel.pranavna@northeastern.edu</span>
+                        </a>
+                        <a href="tel:+18572256150" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (857) 225-6150</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranav-patel-061754325/" target="_blank" rel="noopener" class="contact-link">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>linkedin.com/in/pranav-patel-061754325/</span>
+                        </a>
+                        <a href="https://github.com/pranavpatel0741" target="_blank" rel="noopener" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/pranavpatel0741</span>
+                        </a>
+                    </div>
+                    <!-- Contact form removed as requested -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Pranav Patel. All rights reserved.</p>
+                <div class="footer-social-links">
+                    <a href="mailto:patel.pranavna@northeastern.edu" aria-label="Email" class="spotlight">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranav-patel-061754325/" target="_blank" rel="noopener" aria-label="LinkedIn" class="spotlight">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/pranavpatel0741" target="_blank" rel="noopener" aria-label="GitHub" class="spotlight">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="tel:+18572256150" aria-label="Phone" class="spotlight">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <div class="footer-decoration"></div> <!-- Decoration element -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/glassmorphic-nav.js"></script>
+    <script src="js/react-projects.js"></script>
+</body>
+</html>

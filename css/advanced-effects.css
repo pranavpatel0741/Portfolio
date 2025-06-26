@@ -1,0 +1,442 @@
+/* Advanced Effects for Apex Template-Like Experience */
+
+/* 3D Card Effects */
+.tilt-card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tilt-card .tilt-content {
+    transform: translateZ(20px);
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
+
+/* Project Card 3D Effects */
+.project-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-header, 
+.project-card .project-description,
+.project-card .project-tech {
+    transform: translateZ(10px);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover .project-header {
+    transform: translateZ(25px);
+}
+
+.project-card:hover .project-description {
+    transform: translateZ(15px);
+}
+
+.project-card:hover .project-tech {
+    transform: translateZ(20px);
+}
+
+/* Parallax Elements */
+.parallax-element {
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+}
+
+.parallax-slow {
+    transform: translateZ(-10px) scale(2);
+}
+
+.parallax-medium {
+    transform: translateZ(10px) scale(1.5);
+}
+
+.parallax-fast {
+    transform: translateZ(50px) scale(1);
+}
+
+/* Morphing Backgrounds */
+.morph-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.morph-bg::before,
+.morph-bg::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    animation: morph 15s linear infinite alternate;
+    z-index: -1;
+}
+
+.morph-bg::before {
+    background: linear-gradient(135deg, var(--primary), #7795f8);
+    top: -250px;
+    left: -100px;
+}
+
+.morph-bg::after {
+    background: linear-gradient(135deg, #4cc9f0, var(--primary));
+    bottom: -250px;
+    right: -100px;
+    animation-delay: -7s;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    25% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    50% {
+        border-radius: 40% 60% 30% 70% / 60% 30% 70% 40%;
+    }
+    75% {
+        border-radius: 30% 70% 70% 30% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 40% 50% 60% 50%;
+    }
+}
+
+/* Text Reveal Effects */
+.reveal-text {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.reveal-text span {
+    display: block;
+    transform: translateY(100%);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+}
+
+.reveal-text.active span {
+    transform: translateY(0);
+}
+
+/* Image Hover Effects */
+.hover-zoom {
+    overflow: hidden;
+}
+
+.hover-zoom img,
+.hover-zoom .image-element {
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hover-zoom:hover img,
+.hover-zoom:hover .image-element {
+    transform: scale(1.1);
+}
+
+/* Text Gradient Animation */
+.text-gradient {
+    background: linear-gradient(-45deg, var(--primary), #7795f8, #4cc9f0, var(--secondary));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Animation */
+.floating {
+    animation: floating 5s ease-in-out infinite;
+}
+
+.floating-slow {
+    animation: floating 8s ease-in-out infinite;
+}
+
+.floating-fast {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Button and Link Hover Effects */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-hover-effect:hover::before {
+    transform: translateX(100%);
+}
+
+/* Moving Gradient Background */
+.gradient-motion-bg {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.gradient-motion-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        rgba(67, 97, 238, 0.05) 0%, 
+        rgba(76, 201, 240, 0.05) 25%, 
+        rgba(67, 97, 238, 0.05) 50%, 
+        rgba(76, 201, 240, 0.05) 75%, 
+        rgba(67, 97, 238, 0.05) 100%);
+    animation: gradient-move 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes gradient-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Spotlight Effect */
+.spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translate(100%, 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.spotlight:hover::before {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Smooth Page Transition */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 6px;
+    border: 3px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--secondary), var(--primary));
+}
+
+/* Modern Navigation Style - No sticky behavior */
+.nav-modern {
+    position: relative;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.nav-modern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.05) 50%, 
+        rgba(255, 255, 255, 0.1));
+    z-index: -1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation scroll effect removed */
+
+/* Navigation transitions removed - no sticky behavior */
+
+/* Add a subtle shadow to the scrolled navigation */
+header.scrolled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+}
+
+/* Section Background Enhancements */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(76, 201, 240, 0.05) 100%);
+    filter: blur(60px);
+    opacity: 0.5;
+    animation: morph 15s linear infinite alternate;
+    z-index: -1;
+    top: -400px;
+    right: -400px;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.05) 0%, rgba(67, 97, 238, 0.05) 100%);
+    filter: blur(60px);
+    opacity: 0.5;
+    animation: morph 18s linear infinite alternate;
+    animation-delay: -5s;
+    z-index: -1;
+    bottom: -400px;
+    left: -300px;
+}
+
+.projects-section, .skills-section, .experience-section, .contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-section::before, .skills-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50% 70% 40% 60% / 50% 60% 40% 50%;
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.05) 0%, rgba(67, 97, 238, 0.03) 100%);
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: morph-slow 20s linear infinite alternate;
+    z-index: -1;
+    top: 10%;
+    right: -200px;
+}
+
+.contact-section::after, .experience-section::after {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.03) 0%, rgba(76, 201, 240, 0.05) 100%);
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: morph-reverse 25s linear infinite alternate;
+    z-index: -1;
+    bottom: -400px;
+    left: -200px;
+}
+
+@keyframes morph-slow {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        transform: rotate(0deg);
+    }
+    100% {
+        border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes morph-reverse {
+    0% {
+        border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+    }
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+}

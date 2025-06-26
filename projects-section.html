@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Patel | Projects</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN for demo purposes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: rgba(67, 97, 238, 0.1);
+            --secondary: #3a0ca3;
+            --accent: #4cc9f0; 
+            --text-primary: #1a1a2e;
+            --text-secondary: #4a4e69;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary: #4cc9f0;
+            --primary-light: rgba(76, 201, 240, 0.1);
+            --secondary: #4361ee;
+            --accent: #3a0ca3; 
+            --text-primary: #f8f9fa;
+            --text-secondary: #d1d1e1;
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e24;
+            --card-bg: #2a2a3a;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Sora', sans-serif;
+        }
+        
+        /* Project Section Styles */
+        .project-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn:hover {
+            background-color: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-header {
+            margin-bottom: 1rem;
+        }
+        
+        .project-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+        
+        .project-role {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .project-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .project-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .project-bullets li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0.25rem;
+            font-size: 1.25rem;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+    </style>
+</head>
+<body>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 animate">
+                <span class="inline-block text-primary text-sm font-semibold mb-2">My Work</span>
+                <h2 class="text-4xl font-bold">Projects</h2>
+            </div>
+            
+            <div class="project-filter animate delay-1">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="ml">ML & AI</button>
+                <button class="filter-btn" data-filter="testing">Testing</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate delay-2" data-category="ml">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Diabetes Risk Prediction Model</h3>
+                            <div class="project-role">Project Lead</div>
+                            <div class="project-date">Jan 2025 – Apr 2025</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Developed a predictive model using tree-based machine learning on over 250K health records to assess diabetes risk.</li>
+                            <li>Created an interactive "What-If" tool in R to simulate the impact of lifestyle changes on predicted outcomes.</li>
+                            <li>Engineered an end-to-end AI pipeline including data preprocessing, feature engineering, and hyperparameter tuning.</li>
+                            <li>Compiled results into a stakeholder-friendly report for non-technical healthcare partners and policy analysts.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">caret</span>
+                            <span class="tech-tag">ggplot2</span>
+                            <span class="tech-tag">data preprocessing</span>
+                            <span class="tech-tag">cross-validation</span>
+                            <span class="tech-tag">model evaluation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card animate delay-3" data-category="ml">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Enterprise Generative AI Agent</h3>
+                            <div class="project-role">LLM Fine-Tuning and Automation</div>
+                            <div class="project-date">Feb 2025 – Present</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Fine-tuned domain-specific LLMs using enterprise data to support automated workflows and business intelligence.</li>
+                            <li>Built multi-step reasoning pipelines using LangChain and CrewAI for dynamic enterprise task orchestration.</li>
+                            <li>Evaluated model performance using BLEU, ROUGE, cosine similarity, and embedding-based metrics.</li>
+                            <li>Integrated outputs into consulting and operations workflows through stakeholder collaboration.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Hugging Face Transformers</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">CrewAI</span>
+                            <span class="tech-tag">MLflow</span>
+                            <span class="tech-tag">evaluation metrics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card animate delay-4" data-category="ml">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>AI Chatbot for Customer Support</h3>
+                            <div class="project-role">Project Lead</div>
+                            <div class="project-date">Oct 2024 – Dec 2024</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Built a transformer-based chatbot to automate support ticket resolution with real-time user interaction.</li>
+                            <li>Integrated sentiment analysis and named entity recognition (NER) for accurate intent recognition.</li>
+                            <li>Used REST APIs and external services to provide contextual replies from previous conversations.</li>
+                            <li>Achieved 85% live query resolution accuracy, significantly reducing response time and support workload.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Hugging Face</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">NLP libraries</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">customer analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card animate delay-2" data-category="development">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>E-Commerce Platform Enhancement</h3>
+                            <div class="project-role">Full-Stack Development</div>
+                            <div class="project-date">Jan 2025 – Apr 2025</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Developed REST API improvements and UI components to enhance performance and validation accuracy.</li>
+                            <li>Integrated Selenium and Postman into GitHub Actions to enable automated CI/CD regression testing.</li>
+                            <li>Worked within Agile squads to deliver features mapped to business KPIs.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card animate delay-3" data-category="development">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>AWS Self-Service Portal</h3>
+                            <div class="project-role">Workflow Automation & Monitoring</div>
+                            <div class="project-date">Apr 2025 – Jun 2025</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Created a React-based portal for configuring and monitoring AWS Direct Connect services across regions.</li>
+                            <li>Integrated CloudWatch for real-time metrics and alerting; surfaced data on usage and errors via dashboards.</li>
+                            <li>Enabled secure, testable deployments with GitHub Actions and Lambda automation.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS API Gateway</span>
+                            <span class="tech-tag">CloudWatch</span>
+                            <span class="tech-tag">Lambda</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card animate delay-4" data-category="development">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>TailorResumePro</h3>
+                            <div class="project-role">Resume Parsing & Job Matching App</div>
+                            <div class="project-date">Jun 2025 – Present</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Led frontend engineering for a web tool to match resumes with job descriptions using smart scoring.</li>
+                            <li>Developed a modular UI with Tailwind CSS and Framer Motion for dynamic user interactions.</li>
+                            <li>Integrated localStorage-based onboarding flow and deployed on Azure Static Web Apps.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Framer Motion</span>
+                            <span class="tech-tag">Azure Static Web Apps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="project-card animate delay-5" data-category="ml">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Enterprise AI Data Agent</h3>
+                            <div class="project-role">Retrieval-Augmented Generation</div>
+                            <div class="project-date">Feb 2025 – Present</div>
+                        </div>
+                        <ul class="project-bullets">
+                            <li>Built structured retrieval pipelines for QA systems using internal corpora and enterprise APIs (SAP, Salesforce).</li>
+                            <li>Benchmarked output relevance using BLEU and vector similarity metrics to improve downstream transformation.</li>
+                            <li>Automated data ingestion and evaluation with MLflow and Hugging Face workflows.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Hugging Face</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">CrewAI</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">SAP APIs</span>
+                            <span class="tech-tag">MLflow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Simple animation for projects appearing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Project filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and add to clicked button
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    // Filter projects with animation
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Initial animation
+            const animatedElements = document.querySelectorAll('.animate');
+            animatedElements.forEach(element => {
+                element.classList.add('animated');
+            });
+        });
+    </script>
+</body>
+</html>
